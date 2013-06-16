@@ -43,7 +43,7 @@ module.exports = function(grunt){
         tasks: 'less'
       }
     },
-    min: {
+    uglify: {
       dist: {
         src: ['src/sidetap.js'],
         dest: 'src/sidetap.min.js'
@@ -51,8 +51,12 @@ module.exports = function(grunt){
     }
   });
 
-  grunt.loadNpmTasks('grunt-contrib');
-  grunt.registerTask('build', 'coffee less min');
-  grunt.registerTask('default', 'coffee less min');
+  grunt.loadNpmTasks('grunt-contrib-coffee');
+  grunt.loadNpmTasks('grunt-contrib-less');
+  grunt.loadNpmTasks('grunt-contrib-uglify');
+  grunt.loadNpmTasks('grunt-contrib-watch');
+
+  grunt.registerTask('build', ['coffee', 'less', 'uglify']);
+  grunt.registerTask('default', ['build']);
 
 };

@@ -1,16 +1,11 @@
 var __bind = function(fn, me){ return function(){ return fn.apply(me, arguments); }; };
 
 this.SidetapStandard = (function() {
-
-  SidetapStandard.name = 'SidetapStandard';
-
   SidetapStandard.ios_5 = false;
 
   function SidetapStandard() {
     this.nav_toggle_complete = __bind(this.nav_toggle_complete, this);
-
     this.toggle_nav = __bind(this.toggle_nav, this);
-
     this.set_window_size = __bind(this.set_window_size, this);
     this.stp = this.detect_primary_element("sidetap");
     this.stp_nav = this.detect_primary_element("stp-nav");
@@ -114,23 +109,16 @@ this.SidetapStandard = (function() {
 
 var __bind = function(fn, me){ return function(){ return fn.apply(me, arguments); }; },
   __hasProp = {}.hasOwnProperty,
-  __extends = function(child, parent) { for (var key in parent) { if (__hasProp.call(parent, key)) child[key] = parent[key]; } function ctor() { this.constructor = child; } ctor.prototype = parent.prototype; child.prototype = new ctor; child.__super__ = parent.prototype; return child; };
+  __extends = function(child, parent) { for (var key in parent) { if (__hasProp.call(parent, key)) child[key] = parent[key]; } function ctor() { this.constructor = child; } ctor.prototype = parent.prototype; child.prototype = new ctor(); child.__super__ = parent.prototype; return child; };
 
 this.SidetapIos = (function(_super) {
-
   __extends(SidetapIos, _super);
-
-  SidetapIos.name = 'SidetapIos';
 
   function SidetapIos() {
     this.in_from_left_complete = __bind(this.in_from_left_complete, this);
-
     this.in_from_right_complete = __bind(this.in_from_right_complete, this);
-
     this.down_from_top_complete = __bind(this.down_from_top_complete, this);
-
     this.up_from_bottom_complete = __bind(this.up_from_bottom_complete, this);
-
     this.set_window_size_2 = __bind(this.set_window_size_2, this);
     $("body").addClass("ios");
     this.ios_5 = true;
